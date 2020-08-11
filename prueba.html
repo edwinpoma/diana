@@ -1,0 +1,59 @@
+<html>
+<head><title></title></head>
+<style>
+body{fomt-family: Arial, helveltica, sans-serif;}
+form{border: 3px solid #f1f1f1;}
+input[type=text], input[type=password]{
+width:100%;
+padding:12px 20px;
+margin:8px 0;
+display:inline-block;
+border:1px solid #ccc;
+box-sizing:border-box;
+}
+button{
+background-color:#4caf50;
+color:white;
+padding:14px 20px;
+margin:8px 0;
+border:none;
+cursor:pointer;
+width:100%;
+}
+button:hover {
+  opacity: 0.8;
+  }
+  .container {
+  padding: 16px;
+}
+#ver{
+padding:16px;
+fomt-family: Arial, helveltica, sans-serif;
+}
+</style>
+<body>
+<form id="usuario">
+<div class="usuario">
+ <label for="uname"><b>Usuario</b></label>
+ <input type="text" placeholder="Enter Usuario" name="uname" id="usuario">
+ <label for="psw"><b>Contraseña</b></label>
+ <input type="password" placeholder="Enter Contraseña" name="psw" id="contra" >
+ <button type="button" onclick="mensaje()">enviar</button>
+</div>
+</form>
+<div id="ver"></div>
+<script>
+function mensaje(){
+var x=document.forms["usuario"];
+var text="";
+var i;
+for(i=0;i<x.length;i++){
+text +=x.elements[i].value+"<br>";
+}
+document.getElementById("ver").innerHTML="El usuario es:"+text+"contraseña";
+}
+</script>
+
+
+ </body>
+</html>
